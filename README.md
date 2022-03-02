@@ -1,14 +1,16 @@
 # FdF by lajudy
 
-###About the Task
+### About the Task
+
 TODO: This project is about creating a simplified graphic “wireframe” (“fils de fer” in French, hence the name of the project) representation of a relief landscape linking various points (x, y, z) via segments. The coordinates of this landscape are stored in a file passed as a parameter to your program
 
 [FdF.pdf](06_FdF.pdf)<br>
 ### Usage
 Compile using the command: `make`\
+Maps are included in the `maps` folder\
 Then run the program with the command: `./fdf maps/the_map_you_want.fdf`
 
-###Features
+### Features
 + handling huge and super-huge maps
 + handling colors
 + smooth gradient
@@ -23,7 +25,7 @@ Then run the program with the command: `./fdf maps/the_map_you_want.fdf`
 `mouse wheel rotation` — zoom in/out<br>
 `1` `2` `3` — change projection<br>
 
-###Wallpaper for you☺️
+### Wallpaper for you☺️
 
 ![img1](FdF_wallpaper.png)
 
