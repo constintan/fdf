@@ -6,7 +6,7 @@
 /*   By: lajudy <lajudy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:25:31 by lajudy            #+#    #+#             */
-/*   Updated: 2021/11/13 00:55:54 by lajudy           ###   ########.fr       */
+/*   Updated: 2022/03/02 22:09:49 by lajudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 int	close_window(int keycode, t_map *map)
 {
 	(void) keycode;
-	clear_all(map);
-	mlx_destroy_window(map->mlx_ptr, map->window_ptr);
-	free(map);
-	map = NULL;
+	(void) map;
 	exit (0);
 }
 
@@ -111,9 +108,9 @@ int	main(int argc, char **argv)
 		if (map != NULL)
 		{
 			draw_map(map);
+			mlx_hook(map->window_ptr, 17, 0, close_window, map);
 			mlx_hook(map->window_ptr, 2, 1L << 0, key_hook, map);
 			mlx_mouse_hook (map->window_ptr, mouse_hook, map);
-			mlx_hook(map->window_ptr, 17, 1L << 17, close_window, map);
 			mlx_loop(map->mlx_ptr);
 		}
 		else
